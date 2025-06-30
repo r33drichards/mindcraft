@@ -1,6 +1,6 @@
 const settings = {
     "minecraft_version": "1.21.1", // supports up to 1.21.1
-    "host": "localhost", // or "localhost", "your.ip.address.here"
+    "host": "k3s-1", // or "localhost", "your.ip.address.here"
     "port": 25565,
     "auth": "microsoft", // or "microsoft"
 
