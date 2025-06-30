@@ -40,6 +40,9 @@
         # Additional OpenGL headers
         glib
         glib.dev
+        
+        # UUID library (needed for canvas and other native modules)
+        libuuid
       ];
     };
 
