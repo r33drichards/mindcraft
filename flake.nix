@@ -13,16 +13,33 @@
     
     devShells.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {
       buildInputs = with nixpkgs.legacyPackages.x86_64-linux; [
-        nixpkgs.legacyPackages.x86_64-linux.python3
-        nixpkgs.legacyPackages.x86_64-linux.nodejs
+        python3
+        nodejs
         pkg-config
+        libgcc
+        gnumake # gcc, make, etc.
+        
+        # X11 libraries
         xorg.libX11
         xorg.libXi
         xorg.libXext
         xorg.libX11.dev
         xorg.libXi.dev
         xorg.libXext.dev
-
+        
+        # OpenGL libraries
+        libGL
+        libGLU
+        libGL.dev
+        libGLU.dev
+        
+        # Mesa OpenGL implementation
+        mesa
+        # mesa.dev
+        
+        # Additional OpenGL headers
+        glib
+        glib.dev
       ];
     };
 
